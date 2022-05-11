@@ -5,7 +5,7 @@ import Icon3 from "../../assets/icons/phone.svg";
 
 const Info = () => {
   return (
-    <div className=" grid grid-cols-3 justify-items-center ">
+    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center ">
       <div className="card w-96 bg-base-100 shadow-xl  ">
         <div className="card-body  bg-gradient-to-r from-cyan-500 to-blue-500">
           <div className="flex  justify-between items-center">

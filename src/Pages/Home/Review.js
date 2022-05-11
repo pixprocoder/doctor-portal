@@ -2,17 +2,22 @@ import React from "react";
 import img1 from "../../assets/images/people1.png";
 import img2 from "../../assets/images/people2.png";
 import img3 from "../../assets/images/people3.png";
+import quote from "../../assets/icons/quote.svg";
 
 const Review = () => {
   return (
-    <section className=" text-black border-2">
-      <div className="mb-12 text-center">
-        <h1 className="text-secondary text-xl">Testimonial</h1>
-        <h1 className="text-4xl">What Our Patients Says</h1>
+    <section className=" text-black mb-10">
+      <div className="flex justify-around lg:justify-between items-center">
+        <div>
+          <h1 className="text-secondary text-xl">Testimonial</h1>
+          <h1 className="text-4xl">What Our Patients Says</h1>
+        </div>
+        <div>
+          <img className="w-24 lg:w-48" src={quote} alt="" />
+        </div>
       </div>
-
-      <div className="grid grid-cols-3 justify-items-center">
-        <div className="card w-96  shadow-xl flex flex-col border-2 px-8 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+        <div className="card w-full  shadow-xl flex flex-col  px-8 py-4 ">
           <div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
@@ -32,7 +37,7 @@ const Review = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96  shadow-xl flex flex-col border-2 px-8 ">
+        <div className="card w-full  shadow-xl flex flex-col  px-8 py-4 ">
           <div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
@@ -52,7 +57,7 @@ const Review = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96  shadow-xl flex flex-col border-2 px-8 ">
+        <div className="card w-full  shadow-xl flex flex-col  px-8 py-4 ">
           <div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis

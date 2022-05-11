@@ -17,8 +17,8 @@ const Services = () => {
       </div>
 
       {/* Services card  */}
-      <div className="grid grid-cols-3 justify-items-center">
-        <div class="card w-96  shadow-xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+        <div class="card lg:max-w-lg  shadow-xl">
           <figure class="px-10 pt-10">
             <img src={img1} alt="Shoes" class="rounded-xl" />
           </figure>
@@ -28,7 +28,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div class="card w-96  shadow-xl">
+        <div class="card lg:max-w-lg  shadow-xl">
           <figure class="px-10 pt-10">
             <img src={img2} alt="Shoes" class="rounded-xl" />
           </figure>
@@ -38,7 +38,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div class="card w-96  shadow-xl">
+        <div class="card lg:max-w-lg  shadow-xl">
           <figure class="px-10 pt-10">
             <img src={img3} alt="Shoes" class="rounded-xl" />
           </figure>
@@ -55,10 +55,10 @@ const Services = () => {
         <div class="hero-content flex-col lg:flex-row mb-14">
           <img
             src={treatment}
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-full lg:max-w-sm rounded-lg shadow-2xl"
             alt="treatment"
           />
-          <div className="ml-40">
+          <div className="lg:ml-40 text-center lg:text-left">
             <h1 class="text-5xl font-bold">
               Exceptional Dental Care, on Your Terms
             </h1>

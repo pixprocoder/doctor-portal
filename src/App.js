@@ -6,6 +6,7 @@ import NotFound from "./Pages/Shared/404Page/NotFound";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import Review from "./Pages/Home/Review";
+import Contact from "./Pages/Home/Contact";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/appointment" element={<About />} />
-        <Route path="/contact" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/review" element={<Review />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
