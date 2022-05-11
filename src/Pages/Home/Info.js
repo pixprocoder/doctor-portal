@@ -5,9 +5,9 @@ import Icon3 from "../../assets/icons/phone.svg";
 
 const Info = () => {
   return (
-    <div className=" grid grid-cols-3 justify-items-center">
-      <div class="card w-96 bg-base-100 shadow-xl  border-2">
-        <div class="card-body">
+    <div className=" grid grid-cols-3 justify-items-center ">
+      <div class="card w-96 bg-base-100 shadow-xl  ">
+        <div class="card-body  bg-gradient-to-r from-cyan-500 to-blue-500">
           <div class="flex  justify-between items-center">
             <div className="  mr-4">
               <img src={Icon1} alt="" />
@@ -19,8 +19,8 @@ const Info = () => {
           </div>
         </div>
       </div>
-      <div class="card w-96 bg-base-100 shadow-xl  border-2">
-        <div class="card-body">
+      <div class="card w-96 bg-base-100 shadow-xl  ">
+        <div class="card-body bg-accent">
           <div class="flex  justify-between items-center">
             <div className="  mr-4">
               <img src={Icon2} alt="" />
@@ -34,8 +34,8 @@ const Info = () => {
           </div>
         </div>
       </div>
-      <div class="card w-96 bg-base-100 shadow-xl  border-2">
-        <div class="card-body">
+      <div class="card w-96 bg-base-100 shadow-xl  ">
+        <div class="card-body bg-gradient-to-r from-cyan-500 to-blue-500">
           <div class="flex  justify-between items-center">
             <div className="  mr-4">
               <img src={Icon3} alt="" />
