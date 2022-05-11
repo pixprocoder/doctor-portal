@@ -3,17 +3,17 @@ import chair from "../../assets/images/chair.png";
 
 const Banner = () => {
   return (
-    <div class="hero min-h-screen text-black">
-      <div class="hero-content flex-col lg:flex-row-reverse">
-        <img src={chair} class="max-w-sm rounded-lg shadow-2xl" />
+    <div className="hero min-h-screen text-black">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <img src={chair} className="max-w-sm rounded-lg shadow-2xl" />
         <div>
-          <h1 class="text-5xl font-bold">Your New Smile Starts Here</h1>
-          <p class="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+          <h1 className="text-5xl font-bold">Your New Smile Starts Here</h1>
+          <p className="py-6">
+            This is doctor portal office. we can help people so soon as we can{" "}
+            <br />
+            so if you are looking someone please let's get started.
           </p>
-          <button class="btn btn-primary text-white uppercase font-bold bg-gradient-to-r from-cyan-500 to-blue-500">
+          <button className="btn btn-primary text-white uppercase font-bold bg-gradient-to-r from-cyan-500 to-blue-500">
             Get Started
           </button>
         </div>
