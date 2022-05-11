@@ -5,7 +5,7 @@ import Login from "./Pages/Login/Login";
 import NotFound from "./Pages/Shared/404Page/NotFound";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
-import Review from "./Pages/Review/Review";
+import Review from "./Pages/Home/Review";
 
 function App() {
   return (
