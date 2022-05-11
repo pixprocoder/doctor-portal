@@ -1,11 +1,28 @@
-import logo from "./logo.svg";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./Pages/Home/Home";
+import About from "../src/Pages/About/About";
+import Login from "./Pages/Login/Login";
+import NotFound from "./Pages/Shared/404Page/NotFound";
+import Footer from "./Pages/Shared/Footer/Footer";
+import Header from "./Pages/Shared/Header/Header";
+import Review from "./Pages/Review/Review";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-2xl text-yellow-200">Welcome to Milestone 12</h1>
-      <button class="btn btn-primary">Button</button>
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/appointment" element={<About />} />
+        <Route path="/contact" element={<About />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
