@@ -3,12 +3,17 @@ import treatment from "../../assets/images/treatment.png";
 import img1 from "../../assets/images/fluoride.png";
 import img2 from "../../assets/images/cavity.png";
 import img3 from "../../assets/images/whitening.png";
+import PrimaryButton from "../Shared/PrimaryButton";
 const Services = () => {
   return (
-    <div className="text-black bg-white">
-      <div>
-        <h1 className="text-center text-secondary">Our services</h1>
-        <p className="text-3xl text-center my-20">Services we provide</p>
+    <div className="text-black bg-white ">
+      <div className="my-20">
+        <h1 className="text-center text-secondary text-2xl uppercase">
+          Our services
+        </h1>
+        <p className="text-3xl font-bold text-center uppercase ">
+          Services we provide
+        </p>
       </div>
 
       {/* Services card  */}
@@ -46,8 +51,8 @@ const Services = () => {
 
       {/* Banner  */}
 
-      <div class="hero min-h-screen ">
-        <div class="hero-content flex-col lg:flex-row">
+      <div class="hero min-h-screen  ">
+        <div class="hero-content flex-col lg:flex-row mb-14">
           <img
             src={treatment}
             className="max-w-sm rounded-lg shadow-2xl"
@@ -65,6 +70,7 @@ const Services = () => {
               here', making it look like readable English. Many desktop
               publishing packages and web page
             </p>
+            <PrimaryButton>GET STARTED</PrimaryButton>
           </div>
         </div>
       </div>
