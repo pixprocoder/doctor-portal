@@ -17,7 +17,7 @@ const Review = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
-        <div className="card w-full  shadow-xl flex flex-col  px-8 py-4 ">
+        <div className="card max-w-sm md:max-w-md lg:max-w-7xl  shadow-xl flex flex-col  px-8 py-4 ">
           <div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
@@ -37,7 +37,7 @@ const Review = () => {
             </div>
           </div>
         </div>
-        <div className="card w-full  shadow-xl flex flex-col  px-8 py-4 ">
+        <div className="card max-w-sm md:max-w-md lg:max-w-7xl  shadow-xl flex flex-col  px-8 py-4 ">
           <div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
@@ -57,7 +57,7 @@ const Review = () => {
             </div>
           </div>
         </div>
-        <div className="card w-full  shadow-xl flex flex-col  px-8 py-4 ">
+        <div className="card max-w-sm md:max-w-md lg:max-w-7xl  shadow-xl flex flex-col  px-8 py-4 ">
           <div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
