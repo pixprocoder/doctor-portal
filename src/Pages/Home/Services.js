@@ -18,32 +18,32 @@ const Services = () => {
 
       {/* Services card  */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
-        <div class="card lg:max-w-lg  shadow-xl">
-          <figure class="px-10 pt-10">
-            <img src={img1} alt="Shoes" class="rounded-xl" />
+        <div className="card lg:max-w-lg  shadow-xl">
+          <figure className="px-10 pt-10">
+            <img src={img1} alt="Shoes" className="rounded-xl" />
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">Fluoride Treatment</h2>
+          <div className="card-body items-center text-center">
+            <h2 className="card-title">Fluoride Treatment</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
           </div>
         </div>
 
-        <div class="card lg:max-w-lg  shadow-xl">
-          <figure class="px-10 pt-10">
-            <img src={img2} alt="Shoes" class="rounded-xl" />
+        <div className="card lg:max-w-lg  shadow-xl">
+          <figure className="px-10 pt-10">
+            <img src={img2} alt="Shoes" className="rounded-xl" />
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">Cavity Filling</h2>
+          <div className="card-body items-center text-center">
+            <h2 className="card-title">Cavity Filling</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
           </div>
         </div>
 
-        <div class="card lg:max-w-lg  shadow-xl">
-          <figure class="px-10 pt-10">
-            <img src={img3} alt="Shoes" class="rounded-xl" />
+        <div className="card lg:max-w-lg  shadow-xl">
+          <figure className="px-10 pt-10">
+            <img src={img3} alt="Shoes" className="rounded-xl" />
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="card-title">Teeth Whitening Copy</h2>
+          <div className="card-body items-center text-center">
+            <h2 className="card-title">Teeth Whitening Copy</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
           </div>
         </div>
@@ -51,18 +51,18 @@ const Services = () => {
 
       {/* Banner  */}
 
-      <div class="hero min-h-screen  ">
-        <div class="hero-content flex-col lg:flex-row mb-14">
+      <div className="hero min-h-screen  ">
+        <div className="hero-content flex-col lg:flex-row mb-14">
           <img
             src={treatment}
             className="max-w-full lg:max-w-sm rounded-lg shadow-2xl"
             alt="treatment"
           />
           <div className="lg:ml-40 text-center lg:text-left">
-            <h1 class="text-5xl font-bold">
+            <h1 className="text-5xl font-bold">
               Exceptional Dental Care, on Your Terms
             </h1>
-            <p class="py-6">
+            <p className="py-6">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsumis that it has a more-or-less normal

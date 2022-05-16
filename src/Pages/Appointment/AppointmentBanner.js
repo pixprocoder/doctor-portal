@@ -9,9 +9,9 @@ const AppointmentBanner = () => {
   const [date, setDate] = useState(new Date());
   return (
     <section>
-      <div class="hero min-h-screen">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src={Chair} class="max-w-sm rounded-lg shadow-2xl" alt="" />
+      <div className="hero min-h-screen">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <img src={Chair} className="max-w-sm rounded-lg shadow-2xl" alt="" />
           <div className="text-black  mx-20 border-2 shadow-2xl rounded-xl">
             <DayPicker mode="single" selected={date} onSelect={setDate} />
             <p className="text-center">You picked: {format(date, "PP")}</p>
