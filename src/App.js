@@ -7,6 +7,7 @@ import Header from "./Pages/Shared/Header/Header";
 import Review from "./Pages/Home/Review";
 import Contact from "./Pages/Home/Contact";
 import Appointment from "./Pages/Appointment/Appointment";
+import Signup from "./Pages/Login/Signup";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/review" element={<Review />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

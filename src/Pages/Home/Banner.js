@@ -1,6 +1,7 @@
 import React from "react";
 import chair from "../../assets/images/chair.png";
 import PrimaryButton from "../Shared/PrimaryButton";
+
 const Banner = () => {
   return (
     <div className="hero min-h-screen max-w-7xl  text-black">
