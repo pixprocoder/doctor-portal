@@ -6,13 +6,13 @@ import Navbar from "./Pages/Shared/Navbar/Navbar";
 
 const App = () => {
   return (
-    <>
+    <div className="max-w-screen-xl mx-auto">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 };
 
