@@ -2,9 +2,10 @@ import React from "react";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
+  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 
@@ -12,31 +13,38 @@ const Signup = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile, updating, uError] = useUpdateProfile(auth);
+  const navigate = useNavigate();
 
+  //FORM RELATED WORK---------------------------------
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
 
-  const onSubmit = (data) => {
-    // const name = data.name
-    const email = data.email;
-    const password = data.password;
-    createUserWithEmailAndPassword(email, password);
+  const onSubmit = async (data) => {
+    await createUserWithEmailAndPassword(data.email, data.password);
+    await updateProfile({ displayName: data.name });
+    navigate("/appointment");
   };
+
+  // -------------------------------------------------------
+
   var errorMassage;
-  if (error || gError) {
+  if (error || gError || uError) {
     errorMassage = (
-      <p className="text-red-500">{error?.massage || gError?.massage}</p>
+      <p className="text-red-500">
+        {error?.massage || gError?.massage || uError}
+      </p>
     );
   }
 
-  if (loading || gLoading) {
+  if (loading || gLoading || updating) {
     return <Loading />;
   }
   if (user || gUser) {
-    console.log("user found");
+    console.log(user, gUser);
   }
 
   return (

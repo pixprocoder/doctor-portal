@@ -6,13 +6,17 @@ import {
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import auth from "../../firebase.init";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
 
+  //FORM ----------------------------
   const {
     register,
     formState: { errors },
@@ -20,12 +24,11 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const email = data.email;
-    const password = data.password;
-    signInWithEmailAndPassword(email, password);
-    data.reset();
+    signInWithEmailAndPassword(data.email, data.password);
   };
-  var errorMassage;
+  // ----------------------------------
+
+  let errorMassage;
   if (error || gError) {
     errorMassage = (
       <p className="text-red-500">{error?.massage || gError?.massage}</p>
@@ -36,7 +39,7 @@ const Login = () => {
     return <Loading />;
   }
   if (user || gUser) {
-    console.log("user found");
+    navigate(from, { replace: true });
   }
 
   return (
