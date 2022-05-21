@@ -6,7 +6,7 @@ import phone from "../../assets/icons/phone.svg";
 import CardInfo from "./CardInfo";
 const HomeInfo = () => {
   return (
-    <section className="flex flex-wrap gap-4">
+    <section className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 ">
       <CardInfo
         cardTitle="Opening hours"
         bgClass="bg-gradient-to-r from-secondary to-primary"

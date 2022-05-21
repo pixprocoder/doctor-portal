@@ -11,7 +11,7 @@ const CardInfo = ({ img, cardTitle, bgClass }) => {
             <img src={img} alt="" />
           </div>
           <div>
-            <h2 class="card-title">{cardTitle}</h2>
+            <h2 class="card-title uppercase">{cardTitle}</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
           </div>
         </div>
