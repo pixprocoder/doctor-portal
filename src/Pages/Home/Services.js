@@ -26,8 +26,8 @@ const Services = () => {
     },
   ];
   return (
-    <section className="my-32">
-      <div className="text-center">
+    <section>
+      <div className="text-center my-32">
         <h1 className="text-secondary text-xl">Our services</h1>
         <h1 className="text-5xl">Services we provide</h1>
       </div>
