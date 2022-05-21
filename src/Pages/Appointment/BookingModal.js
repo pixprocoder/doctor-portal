@@ -12,12 +12,12 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
 
   return (
     <section>
-      <input type="checkbox" id="booking-modal" class="modal-toggle" />
-      <div class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-          <h3 class="font-bold text-lg flex items-center justify-between ">
+      <input type="checkbox" id="booking-modal" className="modal-toggle" />
+      <div className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg flex items-center justify-between ">
             {name}
-            <label for="booing-modal" class="btn btn-sm btn-circle ">
+            <label for="booking-modal" className="btn btn-sm btn-circle ">
               ✕
             </label>
           </h3>
@@ -26,9 +26,12 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
               type="text"
               readOnly
               value={format(date, "pp")}
-              class="input w-full input-bordered text-xl mt-4"
+              className="input w-full input-bordered text-xl mt-4"
             />
-            <select name="slot" class="select select-bordered w-full  my-3 ">
+            <select
+              name="slot"
+              className="select select-bordered w-full  my-3 "
+            >
               {slots.map((slot) => (
                 <option value={slot}>{slot}</option>
               ))}
@@ -36,22 +39,22 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
             <input
               type="text"
               placeholder="Name"
-              class="input w-full input-bordered "
+              className="input w-full input-bordered "
             />
             <input
               type="email"
               placeholder="Email"
-              class="input w-full input-bordered my-3"
+              className="input w-full input-bordered my-3"
             />
             <input
               type="text"
               placeholder="Phone"
-              class="input w-full input-bordered "
+              className="input w-full input-bordered "
             />
             <input
               type="submit"
               value="SUBMIT"
-              class="btn w-full mt-3"
+              className="btn w-full mt-3 bg-gradient- to-r from-secondary to-primary"
               for="booking-modal"
             />
           </form>

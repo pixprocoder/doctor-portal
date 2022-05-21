@@ -3,8 +3,8 @@ import React from "react";
 const Service = ({ service, setTreatment }) => {
   const { name, slots } = service;
   return (
-    <div class="card max-w-lg shadow-xl">
-      <div class="card-body text-center ">
+    <div className="card max-w-lg shadow-xl">
+      <div className="card-body text-center ">
         <h2 className="text-2xl text-secondary text-center">{name}</h2>
         <p>
           {slots.length > 0 ? (
@@ -17,12 +17,12 @@ const Service = ({ service, setTreatment }) => {
           {slots.length} {slots.length > 1 ? "spaces" : "space"}
           Available
         </p>
-        <div class="text-center ">
+        <div className="text-center ">
           <label
             for="booking-modal"
             disabled={slots.length === 0}
             onClick={() => setTreatment(service)}
-            class="btn modal-button btn-secondary text-white"
+            className="btn modal-button btn-secondary text-white"
           >
             BOOK APPOINTMENT
           </label>
