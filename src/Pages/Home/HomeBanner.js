@@ -1,6 +1,5 @@
 import React from "react";
 import Chair from "../../assets/images/chair.png";
-import HomeInfo from "./HomeInfo";
 
 const HomeBanner = () => {
   return (
@@ -21,7 +20,6 @@ const HomeBanner = () => {
           </div>
         </div>
       </div>
-      <HomeInfo />
     </section>
   );
 };
