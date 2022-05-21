@@ -1,5 +1,6 @@
 import React from "react";
 import treatment from "../../assets/images/treatment.png";
+import ButtonPrimary from "../Shared/ButtonPrimary";
 const ServiceBanner = () => {
   return (
     <section>
@@ -18,7 +19,7 @@ const ServiceBanner = () => {
               here', making it look like readable English. Many desktop
               publishing packages and web page.
             </p>
-            <button class="btn btn-primary">Get Started</button>
+            <ButtonPrimary>GET STARTED</ButtonPrimary>
           </div>
         </div>
       </div>
