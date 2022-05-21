@@ -4,14 +4,14 @@ const Review = ({ review }) => {
   const { name, img, desc, location } = review;
   return (
     <section>
-      <div class="card max-w-sm mx-auto shadow-xl ">
+      <div className="card max-w-sm mx-auto shadow-xl ">
         <div className="card-body   flex justify-between flex-col ">
           <div>
             <p>{desc}</p>
           </div>
           <div className="flex items-center">
-            <div class="avatar mr-4">
-              <div class="w-20 rounded-full">
+            <div className="avatar mr-4">
+              <div className="w-20 rounded-full">
                 <img src={img} alt="" />
               </div>
             </div>

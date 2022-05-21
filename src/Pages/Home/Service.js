@@ -4,7 +4,7 @@ const Service = ({ service }) => {
   const { name, img, desc } = service;
   return (
     <section>
-      <div class="card max-w-sm mx-auto shadow-xl">
+      <div className="card max-w-sm mx-auto shadow-xl">
         <div
           className={`card-body  items-center flex justify-between flex-col `}
         >
@@ -12,7 +12,7 @@ const Service = ({ service }) => {
             <img src={img} alt="" />
           </div>
           <div>
-            <h2 className="text-center text-3xl" class="card-title">
+            <h2 className="text-center text-3xl" className="card-title">
               {name}
             </h2>
             <p className="text-center ">{desc}</p>
