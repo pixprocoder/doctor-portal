@@ -3,7 +3,7 @@ import appointment from "../../assets/images/appointment.png";
 
 const Contact = () => {
   return (
-    <section style={{ background: `url(${appointment})` }}>
+    <section className="py-8" style={{ background: `url(${appointment})` }}>
       <div className=" text-center  py-8">
         <h1 className="text-secondary ">Contact us</h1>
         <h1 className="text-4xl">Stay connected with us</h1>
