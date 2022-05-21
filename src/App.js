@@ -10,6 +10,7 @@ import Signup from "./Pages/Login/Signup";
 import Reviews from "./Pages/Reviews/Reviews";
 import Navbar from "./Pages/Shared/Navbar/Navbar";
 import NotFound from "./Pages/Shared/NotFound";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -28,6 +29,14 @@ const App = () => {
           element={
             <RequireAuth>
               <Appointment />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
             </RequireAuth>
           }
         />
