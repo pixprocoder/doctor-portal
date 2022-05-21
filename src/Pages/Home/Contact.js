@@ -2,6 +2,9 @@ import React from "react";
 import appointment from "../../assets/images/appointment.png";
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <section
       className="py-8 mt-10"
@@ -29,6 +32,7 @@ const Contact = () => {
         <input
           className="d-block mx-auto btn btn-primary mt-4"
           type="submit"
+          onClick={handleSubmit}
           value="SUBMIT"
         />
       </form>

@@ -3,14 +3,48 @@ import React from "react";
 import auth from "../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 
+import { toast } from "react-toastify";
+
 const BookingModal = ({ treatment, date, setTreatment }) => {
-  const { name, slots } = treatment;
+  const { name, slots, _id } = treatment;
+  const formattedDate = format(date, "PP");
   const [user] = useAuthState(auth);
   const handleBooking = (e) => {
     e.preventDefault();
     const slot = e.target.slot.value;
-    console.log(slot);
-    setTreatment(null);
+    const booking = {
+      treatmentId: _id,
+      treatment: name,
+      slot,
+      date: formattedDate,
+      patient: user.email,
+      patientName: user.displayName,
+      phone: e.target.phone.value,
+    };
+
+    //  SANDING DATA TO THE SERVER
+    const url = `http://localhost:5000/booking`;
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(booking),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success) {
+          toast.success(
+            `Your appointment booked in ${formattedDate} at ${slot}`
+          );
+        } else {
+          toast.error(
+            `Already have an appointment on ${data.exist?.date} at ${data.exist?.slot}`
+          );
+        }
+        setTreatment(null);
+      });
   };
 
   return (
@@ -28,15 +62,17 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
             <input
               type="text"
               readOnly
-              value={format(date, "pp")}
+              value={format(date, "PP")}
               className="input w-full input-bordered text-xl mt-4"
             />
             <select
               name="slot"
               className="select select-bordered w-full  my-3 "
             >
-              {slots.map((slot) => (
-                <option value={slot}>{slot}</option>
+              {slots.map((slot, index) => (
+                <option key={index} value={slot}>
+                  {slot}
+                </option>
               ))}
             </select>
             <input
@@ -55,6 +91,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
             />
             <input
               type="text"
+              name="phone"
               placeholder="Phone"
               className="input w-full input-bordered "
             />

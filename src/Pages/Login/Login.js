@@ -79,7 +79,11 @@ const Login = () => {
             />
             {errors.password && "password  is required"}
             <p>{errorMassage}</p>
-            <input className="btn btn-secondary w-full mt-10" type="submit" />
+            <input
+              className="btn btn-secondary w-full mt-10"
+              type="submit"
+              value="login"
+            />
           </form>
           <p>
             New to Doctors Portal?{" "}
