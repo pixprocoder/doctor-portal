@@ -61,6 +61,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
           <form onSubmit={handleBooking}>
             <input
               type="text"
+              disabled
               readOnly
               value={format(date, "PP")}
               className="input w-full input-bordered text-xl mt-4"
@@ -76,6 +77,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
               ))}
             </select>
             <input
+              disabled
               readOnly
               type="text"
               placeholder="Name"
@@ -83,6 +85,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
               className="input w-full input-bordered "
             />
             <input
+              disabled
               readOnly
               type="email"
               placeholder="Email"
