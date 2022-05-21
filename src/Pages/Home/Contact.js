@@ -1,6 +1,5 @@
 import React from "react";
 import appointment from "../../assets/images/appointment.png";
-import ButtonPrimary from "../Shared/ButtonPrimary";
 
 const Contact = () => {
   return (

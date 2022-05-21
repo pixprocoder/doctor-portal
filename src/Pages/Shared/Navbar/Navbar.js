@@ -15,17 +15,17 @@ const Navbar = () => {
         <Link to="/">HOME</Link>
       </li>
       <li>
-        <a>ABOUT</a>
+        <Link to="/about">ABOUT</Link>
       </li>
       <li>
         <Link to="/appointment">APPOINTMENT</Link>
       </li>
 
       <li>
-        <a>REVIEW</a>
+        <Link to="/review">REVIEW</Link>
       </li>
       <li>
-        <a>CONTACT US</a>
+        <Link to="contact">CONTACT US</Link>
       </li>
       <li>
         {user ? (
