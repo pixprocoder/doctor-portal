@@ -20,7 +20,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
         <div className="modal-box">
           <h3 className="font-bold text-lg flex items-center justify-between ">
             {name}
-            <label for="booking-modal" className="btn btn-sm btn-circle ">
+            <label htmlFor="booking-modal" className="btn btn-sm btn-circle ">
               ✕
             </label>
           </h3>
@@ -62,7 +62,7 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
               type="submit"
               value="SUBMIT"
               className="btn w-full mt-3 bg-gradient- to-r from-secondary to-primary"
-              for="booking-modal"
+              htmlFor="booking-modal"
             />
           </form>
         </div>

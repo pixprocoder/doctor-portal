@@ -55,7 +55,7 @@ const Signup = () => {
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <label>
-              <span class="label">Name</span>
+              <span className="label">Name</span>
             </label>
             <input
               className="input input-bordered w-full "
@@ -67,12 +67,12 @@ const Signup = () => {
 
             <label>
               {errors.email?.type === "required" && (
-                <span class="label">{errors.name.massage}</span>
+                <span className="label">{errors.name.massage}</span>
               )}
             </label>
 
             <label>
-              <span class="label">Email</span>
+              <span className="label">Email</span>
             </label>
             <input
               className="input input-bordered w-full "
@@ -84,12 +84,12 @@ const Signup = () => {
 
             <label>
               {errors.email?.type === "required" && (
-                <span class="label">{errors.email.massage}</span>
+                <span className="label">{errors.email.massage}</span>
               )}
             </label>
 
             <label>
-              <span class="label">Password</span>
+              <span className="label">Password</span>
             </label>
             <input
               className="input input-bordered w-full "

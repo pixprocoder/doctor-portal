@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -16,6 +16,11 @@ const Login = () => {
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
+  useEffect(() => {
+    if (user || gUser) {
+      navigate(from, { replace: true });
+    }
+  }, [user, gUser, from, navigate]);
   //FORM ----------------------------
   const {
     register,
@@ -38,9 +43,6 @@ const Login = () => {
   if (loading || gLoading) {
     return <Loading />;
   }
-  if (user || gUser) {
-    navigate(from, { replace: true });
-  }
 
   return (
     <section className=" flex justify-center items-center h-screen">
@@ -50,7 +52,7 @@ const Login = () => {
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <label>
-              <span class="label">Email</span>
+              <span className="label">Email</span>
             </label>
             <input
               className="input input-bordered w-full "
@@ -62,12 +64,12 @@ const Login = () => {
 
             <label>
               {errors.email?.type === "required" && (
-                <span class="label">{errors.email.massage}</span>
+                <span className="label">{errors.email.massage}</span>
               )}
             </label>
 
             <label>
-              <span class="label">Password</span>
+              <span className="label">Password</span>
             </label>
             <input
               className="input input-bordered w-full "
