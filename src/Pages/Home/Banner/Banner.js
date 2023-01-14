@@ -1,6 +1,7 @@
 import React from "react";
 import chair from "../../../assets/images/chair.png";
 import bg from "../../../assets/images/bg.png";
+import PrimaryButton from "../../../components/PrimaryButton/PrimaryButton";
 
 export default function Banner() {
   const myStyle = {
@@ -23,9 +24,7 @@ export default function Banner() {
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem
           </p>
-          <button className="btn btn-primary bg-gradient-to-r from-primary to-secondary text-white">
-            Explore now
-          </button>
+          <PrimaryButton>Explore Now</PrimaryButton>
         </div>
       </div>
     </div>

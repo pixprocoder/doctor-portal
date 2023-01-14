@@ -1,5 +1,6 @@
 import React from "react";
 import treatment from "../../../assets/images/treatment.png";
+import PrimaryButton from "../../../components/PrimaryButton/PrimaryButton";
 
 export default function ServiceSpacial() {
   return (
@@ -7,10 +8,10 @@ export default function ServiceSpacial() {
       <div className="hero-content mx-10 flex-col lg:flex-row">
         <img
           src={treatment}
-          className="max-w-sm rounded-lg shadow-2xl"
+          className="hidden lg:block lg:w-1/2 rounded-lg shadow-2xl"
           alt=""
         />
-        <div className="px-24">
+        <div className="lg:px-24">
           <h1 className="text-5xl font-bold">
             Exceptional Dental Care, on Your Terms
           </h1>
@@ -22,7 +23,7 @@ export default function ServiceSpacial() {
             here', making it look like readable English. Many desktop publishing
             packages and web page
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <PrimaryButton>Getting Started</PrimaryButton>
         </div>
       </div>
     </div>
