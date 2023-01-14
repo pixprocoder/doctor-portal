@@ -1,11 +1,22 @@
 import React from "react";
 import chair from "../../../assets/images/chair.png";
+import bg from "../../../assets/images/bg.png";
 
 export default function Banner() {
+  const myStyle = {
+    backgroundImage: `url(${bg})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+  };
   return (
-    <div className="hero">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <img src={chair} className="max-w-sm rounded-lg shadow-2xl" alt="" />
+    <div style={myStyle} className="hero py-28">
+      <div className="hero-content px-6 flex-col lg:flex-row-reverse">
+        <img
+          src={chair}
+          className="hidden lg:block max-w-sm rounded-lg shadow-2xl"
+          alt=""
+        />
         <div>
           <h1 className="text-5xl font-bold">Welcome to our world!</h1>
           <p className="py-6">

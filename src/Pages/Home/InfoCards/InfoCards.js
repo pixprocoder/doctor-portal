@@ -12,7 +12,7 @@ export default function InfoCards() {
       description:
         "We are available 24/7 hours in a day. so you can find us every time",
       img: clock,
-      bgClass: "bg-primary",
+      bgClass: "bg-gradient-to-r from-primary to-secondary",
     },
     {
       _id: 2,
@@ -26,7 +26,7 @@ export default function InfoCards() {
       name: "Contact Us",
       description: "You can contact us : 000 000 000 00",
       img: phone,
-      bgClass: "bg-primary",
+      bgClass: "bg-gradient-to-r from-primary to-secondary",
     },
   ];
   return (
