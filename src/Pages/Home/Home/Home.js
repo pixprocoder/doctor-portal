@@ -4,6 +4,7 @@ import InfoCards from "../InfoCards/InfoCards";
 import MakeAppointment from "../MakeAppointment/MakeAppointment";
 import Services from "../Services/Services";
 import ServiceSpacial from "../Services/ServiceSpacial";
+import Testimonials from "../Testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <ServiceSpacial />
       <MakeAppointment />
+      <Testimonials />
     </div>
   );
 }
