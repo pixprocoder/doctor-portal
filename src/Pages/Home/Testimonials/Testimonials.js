@@ -33,7 +33,7 @@ export default function Testimonials() {
     },
   ];
   return (
-    <section>
+    <section className="my-6">
       <div className="flex items-center justify-between my-4">
         <div>
           <h2 className="text-secondary font-bold text-xl">Testimonial</h2>
