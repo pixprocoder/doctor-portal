@@ -29,7 +29,9 @@ export default function Contact() {
             className="textarea textarea-bordered"
             placeholder="Your message"
           ></textarea>
-          <button className="btn block mx-auto btn-primary mt-6">Submit</button>
+          <button className="btn btn-primary bg-gradient-to-r from-primary to-secondary text-white block mx-auto">
+            Submit
+          </button>
         </form>
       </div>
     </section>
